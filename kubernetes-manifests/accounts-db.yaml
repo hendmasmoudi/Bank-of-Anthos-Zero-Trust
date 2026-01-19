@@ -20,7 +20,6 @@ data:
   POSTGRES_USER: accounts-admin
 kind: ConfigMap
 metadata:
-  namespace: data
   labels:
     app: accounts-db
     application: bank-of-anthos
@@ -32,7 +31,6 @@ metadata:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: data
   labels:
     application: bank-of-anthos
     environment: development
@@ -56,7 +54,6 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: data
   labels:
     application: bank-of-anthos
     environment: development
